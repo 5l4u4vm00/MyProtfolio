@@ -1,75 +1,56 @@
-# Nuxt Minimal Starter
+# Yi Hsuan Chao — Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**Live:** [arieschao.com](https://arieschao.com)
 
-## Setup
+Full-stack developer portfolio built with Nuxt 4 + Vue 3, showcasing projects in Vue.js, Python, and .NET.
 
-Make sure to install dependencies:
+---
+
+## Featured Projects
+
+- **TaskFlow** — SaaS project management platform
+- **Enterprise HR System** — Enterprise-grade HR and workforce platform
+- **AI Document Assistant** — LLM-powered document processing tooling
+
+---
+
+## Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Frontend | Vue 3, Nuxt 4, TypeScript |
+| Backend | Python (FastAPI), .NET |
+| Database | PostgreSQL |
+| Fonts | DM Sans, JetBrains Mono, Fraunces (Google Fonts) |
+
+---
+
+## Highlights
+
+- Single-page SPA with smooth scroll navigation between sections
+- Scroll-triggered reveal animations via Intersection Observer API
+- Fully responsive layout with mobile menu
+- Zero external UI library dependencies — custom CSS only
+
+---
+
+## Getting Started
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm run dev       # http://localhost:3000
+npm run build     # production build
+npm run preview   # preview production build
 ```
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## Project Structure
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+app/
+  pages/index.vue   # single-page portfolio (hero, projects, stack, about, blog, contact)
+  app.vue           # root component
+public/             # static assets (favicon, robots.txt)
+nuxt.config.ts      # Nuxt config + Google Fonts
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

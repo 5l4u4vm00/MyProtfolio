@@ -1,0 +1,216 @@
+:root {
+  --bg: #FAFAFA;
+  --bg-alt: #FFFFFF;
+  --surface: #F4F4F5;
+  --border: #E4E4E7;
+  --text-primary: #18181B;
+  --text-secondary: #52525B;
+  --text-muted: #A1A1AA;
+  --accent: #635BFF;
+  --accent-light: #EBE9FF;
+  --accent-dark: #4B45C6;
+  --gradient-1: #635BFF;
+  --gradient-2: #80E9FF;
+  --gradient-3: #7A73FF;
+  --tag-vue: #42B88320;
+  --tag-vue-text: #3BA676;
+  --tag-python: #30699820;
+  --tag-python-text: #306998;
+  --tag-dotnet: #68217A20;
+  --tag-dotnet-text: #68217A;
+  --tag-ts: #3178C620;
+  --tag-ts-text: #3178C6;
+  --tag-db: #33699920;
+  --tag-db-text: #336999;
+  --tag-devops: #FF613320;
+  --tag-devops-text: #D94A27;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 60px rgba(99, 91, 255, 0.15);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-w: 1120px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 32px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(99, 91, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  box-shadow: 0 4px 20px rgba(99, 91, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-alt);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-muted);
+  box-shadow: var(--shadow-sm);
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tag-vue {
+  background: var(--tag-vue);
+  color: var(--tag-vue-text);
+}
+
+.tag-python {
+  background: var(--tag-python);
+  color: var(--tag-python-text);
+}
+
+.tag-dotnet {
+  background: var(--tag-dotnet);
+  color: var(--tag-dotnet-text);
+}
+
+.tag-ts {
+  background: var(--tag-ts);
+  color: var(--tag-ts-text);
+}
+
+.tag-db {
+  background: var(--tag-db);
+  color: var(--tag-db-text);
+}
+
+.tag-devops {
+  background: var(--tag-devops);
+  color: var(--tag-devops-text);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-light);
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  background: var(--accent-light);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.03); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 64px 20px;
+  }
+}
